@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="EN">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <ion-page>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+  <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>  
   <head>
     <script
       type="module"
@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="css/addtohomescreen.css" />
     <link
       href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/themes/blitzer/jquery-ui.css"
-      <!--
+     
       Global
       site
       tag
@@ -55,7 +55,7 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
   </head>
- 
+  
     <ion-header [translucent]="true">
       <ion-toolbar color="danger">
         <!-- <ion-buttons slot="end">
@@ -64,11 +64,12 @@
         <ion-title class="ion-text-center">TruckMiles</ion-title>
       </ion-toolbar>
     </ion-header>
+    <body>
     <div class="wrapper">
       <div data-role="panel" data-theme="c" id="mypanel" data-display="overlay">
         <div data-role="main" class="ui-content" data-theme="c">
           <img id="logo" src="icon2.png" alt="TruckMiles Logo" />
-          <div data-role="header"></div>
+          <!-- <div data-role="header"></div> -->
 
           <label for="SetToCurrentLocation"
             >Set Origin to my GPS location</label
@@ -295,7 +296,8 @@
           </a>
         </div>
       </div>
-      <footer data-role="footer" class="footer" data-theme="c">
+      <ion-footer class="ion-no-border">
+        <ion-toolbar>
         <div
           id="spinner"
           class="spinner-border spinner-border-sm"
@@ -316,8 +318,15 @@
           data-position-to="window"
           >New Trip</a
         >
-
-        <a
+        <ion-buttons slot="secondary">
+          <ion-button id="tMiless">
+            <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+          </ion-button>
+          <ion-button href="#wrapper">
+            <ion-icon slot="icon-only" name="search"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <!-- <a
           id="tMiless"
           href="#mypanel2"
           data-rel="panel"
@@ -326,9 +335,9 @@
           data-inline="true"
           data-position-to="window"
           >Trip Details</a
-        >
+        > -->
 
-        <a
+        <!-- <a
           href="#wrapper"
           data-rel="popup"
           data-role="button"
@@ -336,7 +345,7 @@
           data-inline="true"
           data-position-to="window"
           >Fuel Prices</a
-        >
+        > -->
         <a
           href="#disclaimer"
           data-rel="popup"
@@ -357,7 +366,7 @@
           data-position-to="window"
           >Feedback</a
         >
-        <div class="pos-f-t">
+        <!-- <div class="pos-f-t">
           Trip Tools
           <div class="collapse" id="navbarToggleExternalContent">
             <div class="bg-dark p-4">
@@ -388,10 +397,11 @@
               ></span>
             </button>
           </nav>
-        </div>
-
-        <h5>&copy; ProMiles Software Development Corporation</h5>
-      </footer>
+        </div> -->
+        <br >
+        <ion-tiltel>&copy; ProMiles Software Development Corporation</ion-tiltel>
+      </ion-toolbar>
+      </ion-footer>
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -417,11 +427,12 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZQ8u1LG80wz_cXkCXS-r0x1ojw9XHd0A&callback=initMap"
     ></script>
     <script src="js/addtohomescreen.js"></script>
-    “
+
     <script>
       addToHomescreen();
     </script>
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSyTnZYY7BFNiPES3bpzGIQFCmco3H61g&callback=initMap">
         </script> -->
-  </ion-page>
+        </body>
+  
 </html>
